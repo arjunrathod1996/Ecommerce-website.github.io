@@ -1,0 +1,633 @@
+Step 1 : 
+       I did one Parent container (Section For given name as Header) and there childs are and we have to make flex for seprate them and justify items center and justify content center for better look 
+            a. logo
+            b. div
+        
+        in b. div it has his child that is ul (given name as navbar) and
+        ul has child that is li * 5
+
+        so now we have to do seprate logo and div and we have to give spacen between them
+
+        if you want to your nav doesnot move up then fix it like this 
+
+        position:sticky;
+        top:0;
+        left:0;
+        z-index:999;
+
+step 2:
+       Here we have to work with 2nd child of parent container that child is div (navbar)
+       beacasue it has its child so
+       like
+        div....
+            ul.....
+                li.....
+                li.....
+                li.....     
+                li.....
+                li.....
+                li.....
+            ul....
+        div
+
+        so take div that is navbar and make 
+        display as flex , justify content and items give center
+
+        after flex li' are not look good it look like
+                lililili with underline so
+        so we have to give padding to better look
+
+        therefore 
+        select navbar ul li and give
+        padding o 20px according you and remove list style as none
+
+        if we want remove under line than select 
+
+        navbar ul li a 
+        a contain words so words are contain underline so for remove underline 
+        use text decoration as none
+
+        after finally it look like
+
+        li li li li li look nice better than previous li
+
+step 3:
+
+        If you want to Hover like colour change anything tha use Hover
+        therefore
+
+        select navbar ul li a beacuse it contain words so
+        letter 
+        navbar ul li a:hover{
+             color: give any color
+         }
+         after apply this use transtion for nice smooth at navbar li a beacasue it contain words give transtion as 0.3s whatever you want you can give
+
+         if you want to make one li then use like this
+
+            #navbar li a:hover,
+            #navbar li a.active{
+            color: #088178;
+            }
+
+        after using this except 1st li others will hover beacuse we have applied active therfore
+
+step 4:  It is Your wish you can apply or not
+         if you want horizontal solid hover then do like this
+
+         first we have to create empty content like this
+         conten=""; it will create one div 
+         starting it will not visible beacuse we didnot given color border width height theerefore do give
+
+         #navbar li a.active::after,
+         #navbar li a:hover::after{
+            content: "";
+            width: 30%;
+            height: 2px;
+            background: #088178;
+            position: absolute;
+            bottom: -4px;
+            left: 20px; }
+        This is just demo you can make your design 
+
+        here we given postion absolute so it will go somewhere so if we want corrent position like
+        a (words) below so we have to five position relative its parent 
+
+        its parent is li (ul-->li-->a) see connection go 
+        #navbar li{
+        list-style: none;
+        padding: 0 20px;
+        position: relative;  -------> like this
+        }
+
+        after this empty container will placed correct position
+
+        complete the First Section given name as header now next section
+
+----------------------------------------------------------
+
+Step 1: 
+        Creare another section and give name as hero or       anything you want for reference 
+
+        after this in this you can use background images:
+        use background images url();
+        after uploading image then it will not ne center it will go somewhere so we have to adjust like this 
+
+        #hero{
+        background-image: url("img/hero4.png");
+        height: 100vh;
+        width: 100%;
+        background-position: top 25% right 0; 
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        padding : 0 80px ; ---- for text gap
+
+        display:flex; for making them center  it will go    horizontal so 
+        flex-direction : column;
+        align-items : flex-start;
+        justify-content: center; 
+        }
+
+        while uploading image dont use height 500px like this aothe wise it will give some gap therefore
+
+        after this you cna change minor parts of heading and paragraph
+
+        if you want beautiful and paste small image behind button anf give like this 
+
+        #hero button{
+        background-image: url(img/button.png);
+        background-color: transparent;
+        color:#088178;
+        border: none;
+        padding: 14px 80px 14px 65px;
+        cursor: pointer;
+        font-weight: 600;
+        background-repeat: no-repeat;
+        font-size: 15px;
+        }
+
+        it will look good
+
+    ----------------------------------------------------------
+
+step 1: 
+        creare another section give name as feature and 
+        it contain mutiple div for similar work so first take one div work an thar after that we can copy of them
+
+        so take one div and give name as fe-box 
+        and apply like this 
+
+        #feature .fe-box{
+        text-align: center;
+        width:180px;
+        padding: 25px 15px;
+        box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+        border: 1px solid #cce7d0;
+        border-radius: 4px;
+        margin: 15px 0;
+        }
+
+        take common paddig and margin for all section and use as utility for all it will help other project also
+
+        after that you can apply hover if you want 
+
+        #feature .fe-box:hover{
+        box-shadow: 10px 10px 54px rgba(70,62,221,0.1);
+        }
+
+step 2: 
+
+        you can modify also heading like this 
+
+        #feature .fe-box h6{
+        display: inline-block;
+        padding: 9px 8px 6px 8px;
+        line-height: 1;
+        border-radius: 4px;
+        color: #088178;
+        background-color: #fddde4;
+        }
+
+        here some time heading border look wider it will not look good so afte that you can use dispay as inline-block then it will be suit accurate 
+
+step 3: 
+        if you want to img responsive do like this 
+
+        #feature .fe-box img{
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;  ----> not necessary
+        }
+
+        after compiliton of first div then copy them how much you want and change the image
+
+step 4: 
+        after copying then image or copied div will become vetical column we have to make horiznontal 
+
+        so go up do there only beacuse we can find easily so
+
+        select section given name that is feature and make like this 
+
+        #feature{
+        display: flex;   
+        flex-wrap: wrap;    ---> very imp.
+        align-items: center;
+        justify-content: space-between;
+        }
+
+        then you can change the heading or h6 background color     easily by using nth child 
+        for this 
+
+        1st div will become parent other divis 
+        beacuse we have to work based on this so 
+
+        therefore use like this 
+
+        #feature .fe-box:nth-child(2) h6{
+        background-color:#cdebbc;
+        }
+
+        #feature .fe-box:nth-child(3) h6{
+        background-color:#d1e8f2;
+        }
+
+        #feature .fe-box:nth-child(4) h6{
+        background-color:#cdd4f8;
+        }
+
+        #feature .fe-box:nth-child(5) h6{
+        background-color:#f6dbf6;
+        }
+
+        #feature .fe-box:nth-child(6) h6{
+        background-color:#fff2e5;
+        }
+
+---------------------------------------------------------
+
+step 1:
+        create another section and give name as product 1 
+        make there children in center so apply the text-align as center
+
+        after this take another div that is pro give width in % and should give min-width for responsive for other divices 
+
+        #product1 .pro{
+        width: 23%;
+        min-width: 250px;
+        padding: 10px 12px;
+        border: 1px solid #cce7d0;
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 20px 20px 30px rgba(0,0,0,0.03);
+        margin: 15px 0;
+        transition: 0.2s ease;
+        }
+
+        this div has img so make responsive like this we already done before 
+
+        #product1 .pro img{
+        width: 100%;
+        border-radius: 20px;
+        }
+
+        and afte that you can apply hover 
+
+        #product1 .pro:hover{
+        box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
+        }
+
+        after this do minor design like this
+
+        #product1 .pro .des{
+        text-align: start;
+        padding: 10px 0;
+        }
+
+        #product1 .pro .des span{
+        color: #606063;
+        font-size: 12px;
+        }
+
+        #product1 .pro .des h5{
+        padding-top: 7px;
+        color:#1a1a1a ;
+        font-size: 14px;
+        }
+
+        #product1 .pro .des i{
+        font-size:12px ;
+        color: rgba(243,181,25);
+        }
+
+        #product1 .pro .des h4{
+        padding-top: 7px;
+        font-size: 15px;
+        font-weight: 700;
+        color: #088178;
+        }      
+
+step 2: 
+
+        #product1 .pro .des .cart{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        color:#088178;
+        background-color: #e8f6ea;
+        /* font-weight: 500; */
+        border-radius: 50px;
+        text-align: center;
+        border: 1px solid #cce7d0;
+        position: absolute;
+        bottom: 25px;
+        right: 12px;
+        }
+
+        here give position relative dor child and find its parent and give there position as relative beacuse it will not leave his or her parent 
+
+        otherwise it will go somewher after we cant find 
+
+        and after that copy other container or div how much you want
+
+step 3:
+        after copying go main container not section below that one that is div pro container
+
+        #product1 .pro-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 20px; 
+        }
+
+        after this change the img and heading para etc...
+
+--------------------------------------------------------------
+
+step 1:
+        create another section and give name as banner 
+        #banner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-image: url(img/banner/b2.jpg);
+        width: 100%;
+        height: 40vh;
+        background-size: cover;
+        background-position: center;
+        }
+
+        and then change the headings design
+        #banner h4{
+        color: white;
+        font-size: 16px;
+        }
+
+        #banner h2{
+        color: white;
+        font-size: 30px;
+        padding: 10px 0;
+        }
+
+        #banner h2 span{
+        color: #ef3636;
+        }
+
+        i am forgot to utility to button so i am making now commom button design 
+
+        button.normal{
+        font-size: 14px;
+        font-weight: 600;
+        padding: 15px 30px;
+        color: #000;
+        background-color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        transition: 0.2s;
+        }
+
+        after that give hover particular section not for all common buttons
+
+        #banner button:hover{
+        background-color: #088178;
+        color: white;
+        }
+
+---------------------------------------------------------------
+step 1:
+        create another section and copy section product1 and copy in this step 
+
+--------------------------------------------------------------
+
+step 1:
+        create another section and give name as sm-banner
+        and it contains 2 div and different images 
+
+        
+        #sm-banner .banner-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url(img/banner/b17.jpg);
+        min-width: 580px;
+        height: 50vh;
+        background-size: cover;
+        background-position: center;
+        padding: 30px;
+        }
+
+        first do design one div after this go 2nd div and give same class name and automatcally change''
+        
+        but here we have to change so give another class name for 2nd div 
+
+        and go in css change tha background image
+        #sm-banner .banner-box2{
+        background-image: url(img/banner/b10.jpg);
+        }
+
+        it has buttons so we already created on button design for all but here we have to make minor changes so go and copy and paste and give different class name and design
+
+        button.white{
+        font-size: 13px;
+        font-weight: 600;
+        padding: 11px 18px;
+        color: white;
+        background-color: transparent;
+        cursor: pointer;
+        border: 1px solid white;
+        outline: none;
+        transition: 0.2s;
+        /* margin-top: 10px; */
+        } 
+
+        and apply hover and banner and should change button color so do like this
+
+        #sm-banner .banner-box:hover button{
+        background: #088178;
+        border: 1px solid #088178;
+        }
+
+---------------------------------------------------------
+
+step1 : 
+        create another section and give name as banner3
+
+        in this section has 3 div so take one div and make design in css
+        after that you can copy remaing 2 divis
+
+        #banner3{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 80px;
+        }
+
+        #banner3 .banner-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url(img/banner/b7.jpg);
+        min-width: 30%;
+        height: 30vh;
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        margin-bottom: 20px;
+        }
+
+        after this for div same design should have same class name and 
+        for images mention another class name and change the other div's images
+
+        #banner3 .banner-box3{
+        background-image: url(img/banner/b18.jpg);
+        }
+
+        you van change the text color and design
+
+        #banner3 h2{
+        color: white;
+        font-weight: 900;
+        font-size: 22px;
+        }
+
+        #banner3 h3{
+        color: white;
+        font-weight: 800;
+        font-size: 15px;
+        color: red;
+        }
+-------------------------------------------------------------
+step 1:
+        create another section and give name as newsletter 
+        and it has 2 divs similar as previous section
+
+        #newsletter{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        background-image: url(img/banner/b14.png);
+        background-repeat: no-repeat;
+        background-position: 20% 30%;
+        background-color: #041e42;
+        margin: 40px 0;
+        }
+
+        #newsletter h4{
+        font-size: 22px;
+        font-weight: 700;
+        color: white;
+        }
+
+        #newsletter p{
+         font-size: 14px;
+         font-weight: 600;
+        color: #818ea0;
+        }
+
+        #newsletter p span{
+        color: #ffbd27;
+        }
+
+        after that copy paste for second div and here do change whatever have in second div
+
+        #newsletter .form{
+        display: flex;
+        width: 40%;
+        }
+        #newsletter input{
+        height: 3.125rem;
+        padding: 0 1.25rem;
+        font-size: 14px;
+        width: 100%;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        outline: none;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        }
+
+        #newsletter button{
+        background-color: #088178;
+        color: white;
+        white-space: nowrap;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        }
+---------------------------------------------------------
+
+step 1: 
+        footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        }
+
+        footer .col{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        }
+
+        footer .logo{
+        margin-bottom: 30px;
+        }
+
+        footer h4{
+        font-size: 14px;
+        padding-bottom: 20px;
+        }
+
+        footer p{
+        font-size: 13px;
+        margin: 0 0 8px 0;
+        }
+
+        footer a{
+        font-size: 13px;
+        text-decoration: none;
+        color: #222;
+        margin-bottom: 10px;
+        }
+
+        footer .follow{
+        margin-top: 20px;
+        }
+
+        footer .follow i{
+        color:#465b52;
+        padding-right: 4px;
+        cursor: pointer;
+        }
+
+        footer .install .row img{
+        border: 1px solid #088178;
+        border-radius: 6px;
+        }
+
+        footer .install img{
+        margin: 10px 0 15px 0;
+        }
+
+        footer .follow i:hover,
+        footer a:hover{
+        color: #088178;
+        }
+
+        footer .copyright{
+        width: 100%;
+        text-align: center;
+        }
+
+
+        
+
+
+
